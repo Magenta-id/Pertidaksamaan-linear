@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertidaksamaan linear</title>
+
+    <!-- Konfigurasi & Library MathJax -->
+  <script>
+  window.MathJax = {
+    loader: { load: ['[tex]/color'] },
+    tex: {
+      packages: { '[+]': ['color'] },
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <article>
+        <section id="pembuka">
+
+          <p>Selamat datang kembali di seri materi aljabar!</p>
+
+          <p>Di artikel sebelumnya <a href = "https://binderkedua.blogspot.com/2026/09/panduan-persamaan-linear-dari-satu-dua.html"><em>"Panduan Persamaan Linear: Dari Satu, Dua, hingga Tiga Variabel"</em></a> kita sudah belajar tentang Persamaan Linear. Kali ini, kita akan melangkah ke pembahasan yang tak kalah penting: <strong>Pertidaksamaan Linear.</strong></p>
+
+          <p>Di artikel sebelumnya, kita sudah mengupas tuntas persamaan linear yang dihubungkan oleh tanda sama dengan (=). Nah, dalam aljabar, kita juga akan sangat sering menjumpai hubungan yang tidak menggunakan nilai pasti, melainkan menggunakan tanda pertidaksamaan, yaitu kurang dari (\(\lt\)), lebih dari (\(\gt\)), kurang dari atau sama dengan (\(\le\)), dan lebih dari atau sama dengan (\(\ge\)).</p>
+
+          <p>Lalu, apa sebenarnya arti dari masing-masing tanda tersebut? Yuk, kita bahas satu per satu secara logis di panduan ini!</p>
+
+        </section>
+
+        <section id="pembuka">
+          <h2 class="judul_Materi">Pertidaksamaan Linear</h2>
+
+          <p>Pertidaksamaan Linear adalah kalimat terbuka dalam matematika yang menghubungkan dua ekspresi aljabar menggunakan <em>tanda ketidaksamaan</em>, di mana setiap variabelnya memiliki <em>pangkat tertinggi satu (linear).</em></p>
+
+          <p>Jika pada <em>persamaan linear</em> kita menggunakan tanda sama dengan (=), pada <em>pertidaksamaan linear</em> kita menggunakan salah satu dari empat simbol berikut:</p>
+
+
+          <ul type="circle">
+            <li> \(\lt\) : Kurang dari</li>
+            <li> \(\gt\) : Lebih dari</li>
+            <li> \(\le\) : Kurang dari atau sama dengan</li>
+            <li> \(\ge\) : Lebih dari atau sama dengan</li>
+          </ul>
+
+          <h3 class="sub_bab">Perbedaan Kunci: Persamaan vs Pertidaksamaan</h3>
+
+          <p>Banyak orang sering tertukar antara kedua konsep ini. Cara paling mudah membedakannya adalah dari hasil akhirnya:</p>
+
+          <ol>
+	          <li><strong>Persamaan Linear (=)</strong>
+		          <ul>
+			          <li>Menghasilkan nilai pasti (satu atau beberapa titik tetap).</li>
+			          <li>Contoh: \(x + 2 = 5 \rightarrow x = 3.\) (Jawabannya hanya angka \(3\)).</li>
+		          </ul>
+	          </li>
+
+	          <li><strong>Pertidaksamaan Linear \((\lt, \gt, \le, \ge)\)</strong>
+		          <ul>
+			          <li>Menghasilkan rentang nilai (daerah himpunan penyelesaian).</li>
+			          <li>Contoh: \(x + 2 \lt 5 \rightarrow x \lt 3.\)(Jawabannya adalah <strong>semua angka yang lebih kecil dari 3,</strong> seperti 2, 1, 0, -1, -2, 5, dan seterusnya).</li>
+		          </ul>
+	          </li>
+          </ol>
+
+          <h3 class="sub_bab">Sifat Khusus Pertidaksamaan Linear (Aturan Emas)</h3>
+
+          <p>Secara umum, sifat-sifat pada persamaan biasa \((=)\) juga berlaku pada pertidaksamaan:</p>
+ 
+          <ul>
+	          <li>Kita boleh <em>menambah</em> atau <em>mengurang</em> kedua ruas dengan angka yang sama tanpa mengubah tanda.</li>
+	          <li>Kita boleh <em>mengali</em> atau <em>membagi</em> kedua ruas dengan angka <em>positif</em> tanpa mengubah tanda.</li>
+          </ul>
+
+          <p>Namun, ada satu aturan emas (sifat khusus) yang wajib kamu ingat:</p>
+
+          <div class="tips_trik">
+            <h3>Aturan Emas</h3>
+
+            <p>Jika kedua ruas dikalikan atau dibagi dengan bilangan negatif, maka tanda pertidaksamaan wajib dibalik.</p>
+
+            <p>Perubahan Tanda yang Berlaku:</p>
+ 
+            <ul>
+              <li>Tanda \(\lt\) berubah menjadi \(\gt\)</li>
+              <li>Tanda \(\gt\) berubah menjadi \(\lt\)</li>
+              <li>Tanda \(\le\) berubah menjadi \(\ge\)</li>
+              <li>Tanda \(\ge\) berubah menjadi \(\le\)</li>
+            </ul>
+          </div>
+
+          <p><em>Mengapa Tanda Pertidaksamaan Harus Dibalik?</em> 
+          <br>Mari kita lihat logika sederhananya menggunakan angka nyata:</p>
+
+          <p>Secara logika, kita tahu bahwa: \(2 \lt 5\)<br>Sekarang, coba kita kalikan kedua ruas dengan -1:</p>
+	       
+              \[
+              \begin{align*}
+	            2(-1) &amp;\lt 5(-1) \\
+	            -2 &amp;\lt -5
+	            \end{align*}
+              \]
+          
+	          <p>Jika tandanya <em>tidak dibalik</em>, pernyataannya menjadi \(-2 \lt -5\) (SALAH), karena pada garis bilangan, \(-2\) itu lebih besar daripada \(-5\).</p>
+      
+            <p>Agar nilainya tetap (BENAR), tanda pertidaksamaan <em>harus dibalik</em>:
+	\(-2 \gt -5\)</p>
+
+          <p>Contoh Soal Singkat pada Aljabar:<br><strong> Tentukan nilai x dari pertidaksamaan</strong> \(\mathbf{-3x \lt 12}\).</p>
+
+          \[
+          \begin{align*}
+          {\color{#1b8a6b}{-3}}x &amp;\lt 12 \\
+          x &amp;\gt \frac{12}{\color{#1b8a6b}{-3}} \\
+          x &amp;\gt -4
+          \end{align*}
+          \]
+
+        </section>
+
+        <h2 class="judul_Materi">Jenis-Jenis Pertidaksamaan Linear, </h2>
+        
+        <p>Secara umum, berdasarkan jumlah variabelnya, pertidaksamaan linear terbagi menjadi dua jenis utama yang paling sering kita temui:</p>
+
+<h3 style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #1e293b; border-bottom: 3px solid #2563eb; padding-bottom: 8px; margin-top: 30px;">
+  1. Pertidaksamaan Linear Satu Variabel (PtLSV)
+</h3>
+<p  style="text-align: justify;">Pertidaksamaan Linear Satu Variabel (PtLSV) adalah kalimat terbuka matematika yang hanya memiliki satu variabel, di mana variabel tersebut berpangkat tertinggi satu dan dihubungkan oleh tanda ketidaksamaan $(\lt, \gt, \le, \ge)$.</p>
+
+<p><b>Bentuk Umum</b></p>
+$$
+\begin{align*}
+ax + bx &\lt c \\
+ax + bx &\gt c \\
+ax + bx &\le c \\
+ax + bx &\ge c
+\end{align*}
+$$
+<p><b>Keterangan:</b></p>
+<ul>
+	<li>$x$ adalah variabel (nilai yang belum diketahui).</li>
+	<li>$a$ adalah koefisien dari $x$ (dengan $a ≠ 0$).</li>
+	<li>$b\;\text{dan}\;c$ adalah konstanta (angka pasti).</li>
+</ul>
+
+<h4>Langkah Praktis Menyelesaikan PtLSV</h4>
+<p>Menyelesaikan PtLSV sebenarnya sama seperti menyelesaikan persamaan linear biasa (menggunakan teknik pindah ruas):</p>
+<ul type= "i">
+	<li><strong>Kelompokkan Suku:</strong> Pindahkan suku yang memuat variabel ke ruas kiri dan konstanta (angka) ke ruas kanan.</li>
+	<li><strong>Sederhanakan:</strong> Lakukan penjumlahan atau pengurangan di masing-masing ruas.</li>
+	<li><strong>Cari Nilai Variabel:</strong> Bagi kedua ruas dengan koefisien variabelnya.</li>
+</ul>
+
+<p style="text-align: justify;">Ingat: Seperti yang sudah kita bahas di awal, jika pembagi atau pengalinya adalah bilangan negatif, jangan lupa untuk membalik tanda pertidaksamaannya.</p>
+
+<h4>Contoh Soal &amp; Pembahasan</h4>
+<p style="text-align: justify;">Contoh 1: Tanpa Pembalikan Tanda<br />
+Tentukan himpunan penyelesaian dari $3x - 5 \lt 7.$</p>
+
+$$
+\begin{align*}
+3x\;{\color{#e41b17}{-\;5}}\;&\lt\;7 \\
+{\color{#1b8a6b}{3}}x\;&\lt\;7\;{\color{#e41b17}{+\;5}} \\
+x\;&\lt\; \frac{12}{\color{#1b8a6b}{3}} \\
+x\;&\lt\;4
+\end{align*}
+$$
+<ul>
+	<li>Himpunan Penyelesaian (HP):<br />$\{x \mid x \lt 4, x \in \mathbb{R}\}$</li>
+	<li>Jika x adalah bilangan bulat: $\text{HP} = \{\dots, 1, 2, 3\}.$</li>
+</ul>
+
+<p>Contoh 2: Penerapan Singkat Aturan Pembalikan Tanda</p>
+<p>Tentukan himpunan penyelesaian dari \(-2x + 4 \le 10\).</p>
+
+\[
+\begin{align*}
+-2x {\color{#e41b17}{+ 4}} &\le 10 \\
+{\color{#1b8a6b}{-2}}x &\le 10 {\color{#e41b17}{- 4}} \\
+x &\ge \frac{6}{\color{#1b8a6b}{-2}} \\
+x &\ge -3
+\end{align*}
+\]
+
+<ul>
+ <li>Himpunan Penyelesaian (HP): \(\{x \mid x \ge -3, x \in \mathbb{R}\}\)</li>
+ <li>Jika x adalah bilangan bulat: \(\text{HP} = \{-3, -2, -1, 0, 1, \dots\}\).</li>
+</ul>
+
+<h4>Menyajikan Penyelesaian pada Garis Bilangan</h4>
+<p>Untuk memvisualisasikan hasil penyelesaian di atas, kita menggunakan garis bilangan dengan aturan simbol lingkaran berikut:</p>
+
+<ul>
+	<li>Lingkaran Kosong $(\circ)$: Digunakan untuk tanda $\lt \text{atau} \gt$. Menandakan bahwa angka batas tersebut tidak termasuk dalam penyelesaian.</li>
+	<li>Lingkaran Penuh $(\bullet)$: Digunakan untuk tanda $\le \text{atau} \ge$. Menandakan bahwa angka batas tersebut termasuk dalam penyelesaian.</li>
+</ul>
+
+<h4>Visualisasi:</h4>
+<ol style="text-align: justify;" type="I" class="normal">
+	<li>Untuk $x \lt 4$: Buat lingkaran kosong $(\circ)$ di angka $4$, lalu tarik panah ke arah kiri.</li>
+	<li>Untuk $x \ge -3$: Buat lingkaran penuh $(\bullet)$ di angka $-3$, lalu tarik panah ke arah kanan.</li>
+</ol>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaM2TQwwQHNv42_dkOFyADtGljyotc8Q_U8YDIAubL7aSUY6K0DTvZFn18cchgWd3VIU78BD0uz5pwMPV0PGoenooqpaa-7iAthgQ0gXTUvqlqJpnFBmZO7o2Jsll9TYiZJsHJYVGlWrXFH1Q1dN7uq1eSM0QV1DW4Nfw1QtPQ-GsCV8AuzQksP9OYRoJ0/s1600/1789897036992.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="896" data-original-width="1195" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaM2TQwwQHNv42_dkOFyADtGljyotc8Q_U8YDIAubL7aSUY6K0DTvZFn18cchgWd3VIU78BD0uz5pwMPV0PGoenooqpaa-7iAthgQ0gXTUvqlqJpnFBmZO7o2Jsll9TYiZJsHJYVGlWrXFH1Q1dN7uq1eSM0QV1DW4Nfw1QtPQ-GsCV8AuzQksP9OYRoJ0/s1600/1789897036992.png"/></a></div>
+
+<h3 style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #1e293b; border-bottom: 3px solid #2563eb; padding-bottom: 8px; margin-top: 30px;">2. Pertidaksamaan Linear Dua Variabel</h3>
+
+<p style="text-align: justify;">Pertidaksamaan Linear Dua Variabel (PtLDV) adalah kalimat terbuka matematika yang memuat dua variabel (umumnya dilambangkan dengan $x \text{dan} y$), di mana masing-masing variabelnya berpangkat tertinggi satu dan dihubungkan oleh tanda ketidaksamaan $(\lt, \gt, \le, \ge)$.
+
+<h4>Ciri Khas Utamanya:</h4>
+
+<ul style="text-align: justify;">
+	 <li><strong>Memiliki 2 Variabel:</strong> Beda dari PtLSV yang cuma punya satu variabel (x), PtLDV punya dua variabel berbeda dalam satu pertidaksamaan.</li>
+	<li><strong>Pangkat Variabel = 1</strong>. Jika variabelnya berpangkat 2 (seperti $x^2$), itu bukan lagi bentuk linear.</li>
+	<li><strong>Hasil Penyelesaian Berupa Area (Bidang $2\text{D}$):</strong> Jika PtLSV menghasilkan titik/garis pada garis bilangan $1\text{D}$, maka PtLDV menghasilkan <b>Daerah Himpunan Penyelesaian (DHP)</b> berupa arsiran pada bidang Cartesius 2 dimensi.</li>
+</ul>
+
+<h4>Bentuk Umum</h4>
+
+$$
+\begin{align*}
+ax + by &\lt c \\
+ax + by &\gt c \\
+ax + by &\le c \\
+ax + by &\ge c \\
+\end{align*}
+$$
+<p><b>Keterangan:</b></p>
+<ul>
+	<li>$x$ dan $y$ adalah variabel.</li>
+	<li>$a$ dan $b$ adalah koefisien $(a \neq 0, b \neq 0)$.</li>
+	<li>$c$ adalah konstanta.</li>
+</ul>
+
+ <h4>Langkah Praktis Menyelesaikan &amp; Menggambar DHP PtLDV</h4>
+
+<p style="text-align: justify;">Untuk menentukan <b>Daerah Himpunan Penyelesaian (DHP)</b> dari pertidaksamaan linear dua variabel pada bidang Cartesius, gunakan 4 langkah standar berikut:</p>
+
+<ol>
+	<li><strong>Ubah ke Persamaan Linear:</strong> Ganti sementara tanda pertidaksamaan $(\lt, \gt, \le, \ge)$ menjadi tanda sama dengan (=) untuk membuat garis batas: $ax + by = c$.</li>
+	<li><strong>Cari Titik Potong Sumbu:</strong>
+	<ul>
+		 <li>Titik potong sumbu-$X$: Substitusi $y = 0 \rightarrow (x, 0)$</li>
+		<li>Titik potong sumbu-$Y$: Substitusi $x = 0 \to (0, y)$</li>
+	</ul>
+	<li><strong>Gambar Garis Batas pada Cartesius:</strong>
+	<ul>
+		<li>Garis Putus-Putus $(-\!-\!-)$: Untuk tanda $\lt \text{atau} \gt$.</li>
+		<li>Garis Utuh/Tebal $(\mathbf{\rule{0.8em}{0.4pt}})$: Untuk tanda $\le$ atau $\ge$.</li>
+	</ul></li>
+	<li><strong>Uji Titik Sembarang (Uji Titik (0,0)):</strong>
+	<ul>
+		<li>Substitusi $x=0$ dan $y=0$ ke pertidaksamaan awal.</li>
+		<li>Jika "BENAR": Arsir daerah yang memuat titik (0,0).</li>
+		<li>Jika "SALAH": Arsir daerah yang tidak memuat titik (0,0) (arah sebaliknya).</li>
+	</ul></li>
+</ol>
+
+<h4>Contoh Soal &amp; Pembahasan</h4>
+
+<p><b>Contoh 1</b>: Koefisien y Positif (Arah Arsiran Standar)</p>
+
+<p>Tentukan Daerah Himpunan Penyelesaian (DHP) dari $2x + 3y \le 6$.</p>
+
+<p><b>Penyelesaian:</b></p>
+
+<ol>
+  <li>Persamaan Garis: $2x + 3y = 6$</li>
+  <li>Titik Potong Sumbu:
+    <ul>
+      <li>Potong sumbu-$X$ ($y = 0$):
+        \[
+        \begin{align*}
+        2x + 3y &= 6 \\
+        2x + 3(0) &= 6 \\
+        2x &= 6 \\
+        x &= \frac{6}{2} \\
+        x &= 3
+        \end{align*}
+        \]
+        Jadi, titik potong terhadap sumbu-$X$ adalah $(3, 0)$.
+      </li>
+      <li>Potong sumbu-$Y$ ($x = 0$):
+        \[
+        \begin{align*}
+        2(0) + 3y &= 6 \\
+        3y &= 6 \\
+        y &= 2 \implies (0, 2)
+        \end{align*}
+        \]
+      </li>
+    </ul>
+  </li>
+  <li>Jenis Garis: Menggunakan garis utuh karena tandanya $\le$.</li>
+  <li>Uji Titik $(0,0)$:
+    \[
+    \begin{align*}
+    2(x) + 3(0) &\le 6 \\
+    2(0) + 3(0) &\le 6 \\
+    0 + 0 &\le 6\;\;\text(BENAR) 
+    \end{align*}
+    \]
+  </li>
+</ol>
+
+<p style="text-align: justify;"><b>Kesimpulan:</b> Karena uji titik bernilai "BENAR", daerah yang diarsir adalah daerah yang memuat titik (0,0) (daerah di bawah/kiri garis).</p>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLP0PpFGy8ovBMBSkYJNSHsSZuzxQrhQj0wyJif3M59vYDx_B-gj35ve9HKKivLdEzqqzYEy7R6DdD86EGh-i2_5NyJcBPTY6mQD3JzuOvwrH1qbO8z5pMAQIT-3PQB_V8SO07T8Y1fcu_seK1weDz7v7eSspvaGKSB0KwM1U9U5H80wGRXtsFRUfimqtK/s1600/1790586984911.jpg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="1567" data-original-width="688" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLP0PpFGy8ovBMBSkYJNSHsSZuzxQrhQj0wyJif3M59vYDx_B-gj35ve9HKKivLdEzqqzYEy7R6DdD86EGh-i2_5NyJcBPTY6mQD3JzuOvwrH1qbO8z5pMAQIT-3PQB_V8SO07T8Y1fcu_seK1weDz7v7eSspvaGKSB0KwM1U9U5H80wGRXtsFRUfimqtK/s1600/1790586984911.jpg"/></a></div>
+
+<p><b>Contoh 2</b>: Koefisien y Negatif (Perubahan Arah Logika Uji)</p>
+
+<p>Tentukan Daerah Himpunan Penyelesaian (DHP) dari $x - 2y > 4$.</p>
+
+<p><b>Penyelesaian:</b></p>
+
+<ol>
+  <li>Persamaan Garis: $x - 2y = 4$</li>
+  <li>Titik Potong Sumbu:
+    <ul>
+      <li>Potong sumbu-$X$ ($y = 0$):
+        \[
+        x - 2(0) = 4 \implies x = 4 \implies (4, 0)
+        \]
+      </li>
+      <li>Potong sumbu-$Y$ ($x = 0$):
+        \[
+        0 - 2y = 4 \implies -2y = 4 \implies y = -2 \implies (0, -2)
+        \]
+      </li>
+    </ul>
+  </li>
+  <li>Jenis Garis: Menggunakan garis putus-putus karena tandanya $>$.</li>
+  <li>Uji Titik $(0,0)$:
+    \[
+    (0) - 2(0) > 4 \implies 0 > 4 \quad \text{(SALAH)}
+    \]
+  </li>
+</ol>
+
+<p><b>Kesimpulan</b>: Karena uji titik bernilai "SALAH", daerah yang diarsir adalah daerah yang "TIDAK" memuat titik (0,0) (daerah di bawah/kanan garis).</p>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUZsbrqLO0hSPqEI-ZN1qeJkNl9RL-Xa-AccO9mbepD3AnKtjfnD1WWo7i-GJHPhmf_amnUxA44gxKKQWPxIWXsU-uOnQADQOv7R7BV_CXRehy-Avn5UCJLxooMKD678vjBl_MoD2-2X-WksGSqUuHFgXZzy-Ia2cyu_iY-tucQrhPEi6HBsdRoJD8-_sF/s1600/1790584991191.jpg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="1255" data-original-width="832" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUZsbrqLO0hSPqEI-ZN1qeJkNl9RL-Xa-AccO9mbepD3AnKtjfnD1WWo7i-GJHPhmf_amnUxA44gxKKQWPxIWXsU-uOnQADQOv7R7BV_CXRehy-Avn5UCJLxooMKD678vjBl_MoD2-2X-WksGSqUuHFgXZzy-Ia2cyu_iY-tucQrhPEi6HBsdRoJD8-_sF/s1600/1790584991191.jpg"/></a></div>
+
+<h2 style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #0f172a; border-left: 5px solid #0284c7; padding-left: 12px; margin-top: 30px;">Penutup</h2>
+
+<p>Nah, itulah pembahasan lengkap mengenai Pertidaksamaan Linear, mulai dari satu variabel (PtLSV) hingga dua variabel (PtLDV). Setelah menguasai konsep rentang nilai, sifat pembalikan tanda, hingga cara menggambarkan daerah himpunan penyelesaiannya (DHP), kamu sudah punya modal kuat untuk melangkah ke materi berikutnya!</p>
+<p>Lalu, bagaimana caranya jika kita ingin mencari daerah penyelesaian dari beberapa pertidaksamaan sekaligus dalam satu grafik? Jawabannya akan kita bahas di seri artikel sistem pertidaksamaan berikutnya!</p>
+        </article>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
