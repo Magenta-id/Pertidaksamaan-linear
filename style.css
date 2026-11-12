@@ -1,248 +1,86 @@
-mjx-container {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-mjx-container[display] {
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  margin: 0.5em 0;
-  padding: 2px 0;
-}
-
-/* Hanya mengubah warna teks dasar MathJax menjadi hitam, tanpa merusak warna kustom */
-mjx-container, mjx-math, mjx-mrow {
-    color: #000;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-p, li, h1, h2, h3, h4, h5, h6 { color: #000; }
-
-p { font-size: 1rem; }
-
-h2 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 0.75rem;
 }
 
-h3 {
-  font-size: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
+.trivia-badge {
+  background-color: #fef3c7;
+  color: #b45309;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.375rem;
 }
 
-.judul_DaIs {
-  margin-top: 0;
-  margin-bottom: -1rem;
+.trivia-icon {
+  font-size: 1.2rem;
+  line-height: 1;
 }
-#daftar_isi {
-  background-color: #FFFFF7;
-  /* Untuk warna dasar background */
-  background-image: linear-gradient(#F5F5F5, #F5F5F5), linear-gradient(to right, #0909FF, #F70D1A);
-  /* LG_1 untuk menimpa warna background utama, LG_2 untuk menimpa warna border */
-  background-origin: border-box;
-  /* Berfungsi untuk memastikan bahwa titik awal koordinat perhitungan posisi kedua gradien dimulai dari tepi paling luar kotak (border-box), sehingga posisinya benar-benar presisi dan sejajar dari ujung ke ujung.*/
-  background-clip: padding-box, border-box;
-  /* Posisi untuk lg_1 dan lg_2 */
-  border: 2px solid transparent;
-  /* Membuat garis batas + transparan agar warna border nanti bisa ditimpa/ditembus */
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin: 2rem 2rem;
+
+.trivia-body {
+  font-size: 0.95rem;
+  color: #451a03;
+  line-height: 1.6;
+}
+
+/* Batas */
+
+/* Warning */
+.warning {
   max-width: 35rem;
-  padding: 1rem 1rem;
-}
-#daftar_isi *:last-child { margin-bottom: 0; }
-.isi_DaIs li a {
-  display: inline-block;
-  position: relative;
-  color: #4a5568;
-  text-decoration: none;
-  padding: 3px 0;
-  transition: color 0.25s ease;
+  margin: 2rem auto; /* Posisi di tengah laman */
+  background-color: #f8fafc; /* Warna dasar abu-abu terang yang sangat kalem */
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
 }
 
-/* Membuat garis bawah tersembunyi secara default */
-.isi_DaIs li a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.isi_DaIs li a:hover { color: #3182ce; }
-/* Memunculkan garis bawah dari kiri ke kanan saat hover */
-.isi_DaIs li a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+/* Efek interaktif halus */
+.warning:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
 }
 
-
-.judul_Materi {
-  position: relative;
-  padding-bottom: 10px;
-  width: fit-content;
+.warning-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
 }
-.judul_Materi::before {
-  background: linear-gradient(135deg, #0909FF, #F70D1A);
-  border-radius: 3px;
-  bottom: 0;
-  content: '';
-  height: 5px;
-  left: 0;
-  position: absolute;
-  width: calc(100% + 20px);
+.warning-icon-wrapper {
+  background-color: #fef3c7; /* Kuning pasir yang lembut */
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
-
-/*.img {
-  border-radius:6px;
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  max-width: 650px;
-  width: 100%;
-}*/
-
-/* Menargetkan semua gambar langsung di CodePen */
-img {
-  border-radius: 6px;
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  max-width: 650px; /* Batasi lebar maksimal sesuai keinginan */
-  width: 100%;
-}
-.post-body img, 
-.separator img {
-  max-width: 650px !important; /* Batasi lebar maksimal agar tidak raksasa */
-  width: 100% !important;
-  height: auto !important;
-  display: block;
-  margin: 0 auto;
-  border-radius: 6px;
-}
-
-
-.judul_sed { margin-top: -0.5rem; }
-.rumus_sed{
-  background-image: linear-gradient(#FEFCFF, #FEFCFF), linear-gradient(to right, #EAC117, #FF8C00);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin: 2rem auto;
-  max-width: 35rem;
-  padding: 1rem 1rem;
-}
-
-.tips_trik{
-  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #045F5F, #228B22);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin: 2rem auto;
-  max-width: 35rem;
-  padding: 1rem 1rem;
-}
-.tips_trik h3 { margin-top: -0.2rem; }
-
-.asal_rumus {
-  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #00FFFF, blue);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin: 2rem auto;
-  max-width: 35rem;
-  padding: 1rem 1rem;
-}
-.asal_rumus h3 { margin-top: -0.1rem; }
-
-.catatan{
-  background-color: #F0F8FF;
-  border-radius: 3px;
-  position: relative;
-  padding-left: 15px; 
-  width: fit-content;
-}
-.catatan::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;             /* Membuat tinggi garis mengikuti tinggi teks */
-  width: 5px;            /* Ketebalan garis vertikal */
-  height: 100%;          /* Atau atur tinggi spesifik, misal: 80% */
-  background: linear-gradient(135deg, #000080, #14A3C7);
-  border-radius: 3px;
-}
-.catatan h3{color: #151B54;}
-
-.sub_bab{
-  position: relative;
-  padding-left: 15px; 
-  width: fit-content;
-}
-.sub_bab::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;             /* Membuat tinggi garis mengikuti tinggi teks */
-  width: 5px;            /* Ketebalan garis vertikal */
-  height: 100%;          /* Atau atur tinggi spesifik, misal: 80% */
-  background: linear-gradient(135deg, red, pink);
-  border-radius: 3px;
-}
-
-/* Styling Tombol Melayang Back to Top */
-#btnBackToTop {
-  display: none; /* Sembunyikan awal (hanya muncul saat di-scroll) */
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background: linear-gradient(135deg, #0909FF, #F70D1A); /* Aksen warna selaras dengan tema blog Anda */
-  color: #ffffff;
-  cursor: pointer;
-  padding: 12px 16px;
-  border-radius: 50%;
+.warning-icon {
   font-size: 1.1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transition: opacity 0.3s ease, transform 0.2s ease, background 0.3s ease;
+  line-height: 1;
 }
-/* Efek Hover saat kursor mendekat */
-#btnBackToTop:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+.warning-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
-/* Efek saat tombol ditekan */
-#btnBackToTop:active {
-  transform: translateY(0) scale(0.95);
+.warning-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #b45309; /* Warna amber gelap yang hangat */
+}
+.warning-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #334155; /* Teks abu-abu gelap agar nyaman dibaca lama */
+  line-height: 1.6;
 }
 
-/*Yang diatas wajib ada ya!! */
+/* Batas */
