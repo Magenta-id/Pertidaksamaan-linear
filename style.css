@@ -145,6 +145,27 @@ h3.daftar-isi {
 
 /* Batas */
 
+/* Sub-bab */
+.sub-bab {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 2rem 0 1rem 0;
+  padding-left: 0.85rem;
+  position: relative;
+  line-height: 1.4;
+}
+.sub-bab::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  bottom: 0.1rem;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #2563eb 0%, #06b6d4 100%);
+}
+
 /* Gambar */
 /* Menargetkan semua gambar langsung di CodePen */
 img {
