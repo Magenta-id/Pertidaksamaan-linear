@@ -385,7 +385,7 @@ h3.catatan {
 
 /* Batas */
 
-.rumus2 {
+.rumuskedua {
   background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(135deg, #EAC117, #FF8C00);
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -398,10 +398,12 @@ h3.catatan {
   padding: 1.5rem;
   transition: transform 0.2s ease;
 }
-.rumus2:hover {
+
+.rumuskedua:hover {
   transform: translateY(-2px); /* Efek interaktif halus saat kursor di atasnya */
 }
-.judul_rumus2 {
+
+.judul_rumuskedua {
   margin-top: -0.25rem;
   font-weight: 700;
   color: #2d2d2d;
